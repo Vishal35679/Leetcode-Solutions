@@ -1,0 +1,11 @@
+29. Divide Two Integers
+
+CODE:
+class Solution {
+public:
+    int divide(int dividend, int divisor) {
+        long long ans=(long long)dividend/divisor;
+        if((long long)dividend/divisor>2147483647) ans=2147483647;
+        return ans;
+    }
+};
