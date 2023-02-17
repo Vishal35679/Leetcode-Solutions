@@ -12,7 +12,8 @@ CODE:
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
- #include <vector>
+
+
 class Solution {
 public:
     vector<int> value;
@@ -24,11 +25,9 @@ public:
         inorder(root -> right);
     }
     int minDiffInBST(TreeNode* root) {
-        // return 1;
         inorder(root);
         int ans = INT_MAX;
         sort(value.begin(), value.end());
-        // ans = value[1] - value[0];
         for(int i=0; i+1<value.size(); ++i){  
              if(value[i+1]-value[i]<ans){
                 ans= value[i+1]- value[i];
